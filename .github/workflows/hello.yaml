@@ -1,0 +1,11 @@
+#yaml is a jason file without the curly brackets
+
+name: My first workflow
+on:
+- push # array, can do ["push"] too
+jobs:
+  my-first-workflow:
+    runs-on: ubuntu-latest # ubuntu server
+    steps:
+      - name: echo the date on Github
+        run: echo "The current time/date on Github is $(date)"
